@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python3", "playwright-driver", "glib", "nss", "nspr", "atk", "at-spi2-atk", "libdrm", "dbus", "cups"]
+
+[phases.build]
+cmds = ["pip install -r requirements.txt", "python3 -m playwright install chromium"]
+
+[phases.start]
+cmd = "python3 bot.py"
